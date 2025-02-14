@@ -10,6 +10,7 @@ import cookieParser from "cookie-parser";
 const app=express()
 app.use(express.json());
 app.use(cookieParser()); 
+app.use("/", userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users',userRoutes)
 app.listen(3000,()=>{
